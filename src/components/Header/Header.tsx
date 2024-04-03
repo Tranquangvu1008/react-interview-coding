@@ -1,12 +1,30 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 function Header() {
+    const location = useLocation();
+
+    const isActive = (path: any) => location.pathname === path;
+
     return (
         <header>
             <nav>
-                <ul className='flex justify-center gap-4 mb-4'>
-                    <li><Link to="/questionBoard">Question Board</Link></li>
-                    <li><Link to="/trafficLight">Traffic Light</Link></li>
+                <ul className='flex justify-center gap-4 my-6'>
+                    <li>
+                        <Link to="/questionBoard" className={isActive('/questionBoard') ? 'text-blue-500' : ''}>
+                            Question Board
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/trafficLight" className={isActive('/trafficLight') ? 'text-blue-500' : ''}>
+                            Traffic Light
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/accordion" className={isActive('/accordion') ? 'text-blue-500' : ''}>
+                            Accordion
+                        </Link>
+                    </li>
                 </ul>
             </nav>
         </header>
