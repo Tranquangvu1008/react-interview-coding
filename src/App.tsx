@@ -4,6 +4,7 @@ import { QuestionBoard } from './components/QuestionBoard/QuestionBoard'
 import Header from './components/Header/Header'
 import { TrafficLight } from './components/TrafficLight/TrafficLight'
 import { Accordion } from './components/Accordion/Accordion'
+import { ReactHookForm } from './components/ReactHookForm/ReactHookForm'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route index path='questionBoard' element={<QuestionBoard />} />
           <Route path='trafficLight' element={<TrafficLight />} />
           <Route path='accordion' element={<Accordion />} />
+          <Route path='reactHookForm' element={<ReactHookForm />} />
           {/* <Route path='pageNotFound' element={<ErrorPage />} />
         <Route path="*" element={<ErrorPage />} /> */}
         </Routes>

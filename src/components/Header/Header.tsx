@@ -25,6 +25,11 @@ function Header() {
                             Accordion
                         </Link>
                     </li>
+                    <li>
+                        <Link to="/reactHookForm" className={isActive('/reactHookForm') ? 'text-blue-500' : ''}>
+                            React Hook Form
+                        </Link>
+                    </li>
                 </ul>
             </nav>
         </header>
